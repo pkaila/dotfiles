@@ -48,3 +48,19 @@ set guioptions-=T
 set nobackup
 set nowritebackup
 
+" Default window size
+set lines=50 columns=150
+
+" Always show cursor position
+set ruler
+
+" Show partial commands
+set showcmd
+
+" Always show status line
+set laststatus=2
+
+" Filetype for gradle scripts
+autocmd BufNewFile,BufRead *.gradle set filetype=groovy
+
+
