@@ -33,6 +33,11 @@ colorscheme molokai
 set hlsearch
 set incsearch
 
+" Case insesitive with smartcase (only lowercase -> case insensitive, at least
+" one upper case -> case sensitive)
+set ignorecase
+set smartcase
+
 " Set tabs (tabsize 2, convert tabs to spaces)
 set tabstop=2
 set shiftwidth=2
@@ -43,6 +48,9 @@ set number
 
 " Hide toolbar
 set guioptions-=T
+
+" Copy selection to OS clipboard
+set guioptions+=a
 
 " Don't do backups
 set nobackup
