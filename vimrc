@@ -71,4 +71,8 @@ set laststatus=2
 " Filetype for gradle scripts
 autocmd BufNewFile,BufRead *.gradle set filetype=groovy
 
+" Set the swap location to temp directory in Windows
+if has("win32") || has("win64")
+  set directory=%TEMP%//
+end
 
