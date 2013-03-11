@@ -1,0 +1,18 @@
+#!/bin/sh
+
+function pman {
+  MAN_CACHE=~/Library/Caches/org.fugu.pman
+  if [ ! -d $MAN_CACHE ]; then
+    mkdir -p $MAN_CACHE
+  fi
+  if [ $# -gt 1 ]; then
+    PDF_FILE=$MAN_CACHE/$1_$2.pdf
+  else
+    PDF_FILE=$MAN_CACHE/$1.pdf
+  fi
+  if [ ! -r $PDF_FILE ]; then
+    man -t "$@" | pstopdf -i -o $PDF_FILE
+  fi
+  open $PDF_FILE  
+}
+

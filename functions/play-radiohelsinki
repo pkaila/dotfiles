@@ -1,0 +1,6 @@
+#!/bin/sh
+
+function play-radiohelsinki {
+  osascript -e 'tell application "iTunes" to open location "http://radio1.radiohelsinki.fi/rh256"'
+}
+

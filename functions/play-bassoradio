@@ -1,0 +1,6 @@
+#!/bin/sh
+
+function play-bassoradio {
+  osascript -e 'tell application "iTunes" to open location "http://188.117.44.132:8000/"'
+}
+
