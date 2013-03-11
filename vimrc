@@ -63,8 +63,10 @@ set guioptions+=a
 set nobackup
 set nowritebackup
 
-" Default window size
-set lines=50 columns=150
+" Default window size, but only if running a gui
+if has("gui_running")
+  set lines=50 columns=150
+endif
 
 " Always show cursor position
 set ruler
